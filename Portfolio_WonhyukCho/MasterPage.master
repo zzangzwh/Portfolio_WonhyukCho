@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register TagName="Header" TagPrefix="WUC" Src="~/Header.ascx" %>
+<%@ Register TagName="Footer" TagPrefix="WUC" Src="~/Footer.ascx" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Wonhyuk's Portfolio</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+<link href="css/StyleSheet.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="boxicons-2.1.2/css/boxicons.css" />
+</head>
+<body>
+    <WUC:Header ID="HeaderControl" runat="server" />
+    <form id="MasterForm" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="Main" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+        <WUC:Footer runat="server" />
+</body>
+</html>
